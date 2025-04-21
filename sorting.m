@@ -1,4 +1,4 @@
-function [feature,sorted_indices] = feature_selection(feature,Labels,n,type)
+function [feature,sorted_indices] = sorting(feature,Labels,n,type)
     switch type
         case 1 % Pearson相关系数
             % 计算每个特征与标签的皮尔逊相关系数
