@@ -1,1 +1,5 @@
-# ResMTN
+ResMTN
+
+main function - 'ResMTN.m'
+
+The accurate and prompt automatic detection of epilepsy is crucial for delivering effective treatment and enhancing the quality of life for patients. While current deep learning methods offer high diagnostic precision, their intricate model structures and computational demands can delay real-time epilepsy diagnosis. This paper proposes a novel Residual Multi-dimensional Taylor Network (ResMTN) classifier as a solution to these problems. By integrating the strategies of Residual Networks (ResNet) into the Multi-dimensional Taylor Network (MTN) and proposing an innovative weight initialization strategy called Stabilized Polynomial Initialization (SPI), we successfully mitigate the overfitting and gradient vanishing issues caused by the high-order polynomial terms in MTN, further boosting the network's performance and representational capacity. Results from experiments conducted on a publicly available dataset from the University of Bonn show how effective ResMTN classifier is. When fed with features derived from the original signals through wavelet transform and subsequent feature extraction, the ResMTN achieved a diagnostic accuracy of 99.82% with an average training time of just 0.9 seconds.
