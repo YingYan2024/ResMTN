@@ -11,8 +11,6 @@ original_Labels = [ones(1,100), ones(1,100)*2, ones(1,100)*3, ones(1,100)*4, one
 composite_class1 = [1, 2, 3, 4]; % Classes A~D
 composite_class2 = [5]; % Classes E
 
-[feature,sorted_indices]=feature_selection(feature,original_Labels',24,2);
-
 t0=tic; % Timing the entire process
 
 % Set learning rate and training epochs
@@ -29,7 +27,8 @@ total_num = size(feature, 2); % Get actual sample count from feature size
 train_num=round(total_num*(k-1)/k); % Size of training set (nine folds)
 
 % Set network structure
-feature_size=size(feature,1); % Dimension of feature vector
+[feature,sorted_indices]=feature_selection(feature,original_Labels',24,2);
+feature_size=size(feature,1);
 
 % Calculate expanded feature size based on polynomial order
 expan_size=1;
