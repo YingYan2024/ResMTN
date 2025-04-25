@@ -99,9 +99,9 @@ for testingNum=1:testNum
         res_Train_Data_valid=res_Train_Data;
         
         % Initialize weight matrices
-        % Initialization types: 1=Random, 2=Gaussian, 3=Xavier-logistic, 4=Xavier-tanh, 5=Random
-        W1 = gpuArray(Initialization(hidden_size, expan_size,7));
-        W2 = gpuArray(Initialization(output_size, hidden_size,2));
+        W2 = gpuArray(sqrt(2/(output_size+hidden_size))*randn(output_size,hidden_size,'double'));
+        W1_r = 4*sqrt(3/( expan_size * (1+ 9*(1+0.3).^4 / (1^2 + 1*0.3 + 0.3^2).^2) ));
+        W1 = gpuArray(unifrnd(-W1_r, W1_r, [hidden_size, expan_size]));
 
         train_accurancy=0;
         test_accurancy=0;
